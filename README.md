@@ -5,14 +5,14 @@
 1. [标签式](./examples/demo01.html)
 
 ```
-    class View extends HTMLElement {  // 创建自定义类并继承自HTML元素类
-        constructor() {
-            super();
-        }
+  class View extends HTMLElement {
+    constructor() {
+      super();
     }
-    customElements.define("el-view", View, { extends: "div" });
+  }
+  customElements.define("el-view", View);
     // customElements的define方法用于注册自定义组件
-    // define 暴露三个参数入口，分别是：自定义组件名[必填]，组件功能类[必填]，和 继承自 某节点名[选填]
+   
 ```
 
 2. [is 属性标记](./examples/demo01.html)
@@ -24,6 +24,7 @@
     }
   }
   customElements.define("el-view", View, { extends: "div" });
+   // define 暴露三个参数入口，分别是：自定义组件名[必填]，组件功能类[必填]，和 继承自 某节点名[选填]
 ```
 
 ### 定义模板
