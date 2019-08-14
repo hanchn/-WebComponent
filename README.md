@@ -11,7 +11,7 @@
     }
   }
   customElements.define("el-view", View);
-    // customElements的define方法用于注册自定义组件
+  // customElements的define方法用于注册自定义组件
    
 ```
 
@@ -24,7 +24,7 @@
     }
   }
   customElements.define("el-view", View, { extends: "div" });
-   // define 暴露三个参数入口，分别是：自定义组件名[必填]，组件功能类[必填]，和 继承自 某节点名[选填]
+  // define 暴露三个参数入口，分别是：自定义组件名[必填]，组件功能类[必填]，和 继承自 某节点名[选填]
 ```
 
 ### 定义模板
