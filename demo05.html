@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <el-view>点击我</el-view>
+    <template>
+      <h1>Hello World !</h1>
+    </template>
+  </body>
+</html>
+<script>
+  class View extends HTMLElement {
+    constructor() {
+      super();
+    }
+  }
+  customElements.define("el-view", View);
+  let elView = document.querySelector("el-view");
+  elView.addEventListener("click", () => {
+    let template = document.querySelector("template").content;
+    let cloneTemplate = document.importNode(template, true); // true 表示深拷贝节点
+    elView.appendChild(cloneTemplate);
+  });
+</script>

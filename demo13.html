@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <el-test />
+    <template class="test">
+      <h1 bind:click="alertForm" model="value"></h1>
+    </template>
+  </body>
+</html>
+<script src="./js/Component.js"></script>
+<script>
+  new Component("el-test", {
+    data: {
+      value: 'Hello World !',
+    },
+    props: {
+      alertForm: function(){
+        this.setAttribute('style', `color: green;`);
+      }
+    },
+    style: {
+      h1: {
+        color: 'red',
+        'font-size': 100
+      }
+    },
+    template: ".test"
+  });
+</script>

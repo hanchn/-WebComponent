@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <el-view> </el-view>
+    <template>
+      <h1>Hello World !</h1>
+      <slot name="mySlot">
+        loading... slot
+      </slot>
+    </template>
+  </body>
+</html>
+<script>
+  class View extends HTMLElement {
+    constructor() {
+      super();
+      let shadowRoot = this.attachShadow({ mode: "open" });
+      let template = document.querySelector("template").content;
+      let cloneTemplate = document.importNode(template, true); // true 表示深拷贝节点
+      shadowRoot.appendChild(cloneTemplate);
+      this.fakeApi();
+    }
+
+    fakeApi = () =>
+      setTimeout(() => {
+        this.innerHTML = `
+          <ul slot="mySlot">
+            <li>测试插槽</li>
+            <li>测试插槽</li>
+            <li>测试插槽</li>
+            <li>测试插槽</li>
+            <li>测试插槽</li>
+            <li>测试插槽</li>
+            <li>测试插槽</li>
+            <li>测试插槽</li>
+            <li>测试插槽</li>
+            <li>测试插槽</li>
+          </ul>`;
+      }, 5000);
+  }
+  customElements.define("el-view", View);
+</script>
