@@ -62,7 +62,7 @@ DOM.appendChild(createEl);
 
 ```
 let shadowRoot = this.attachShadow({ mode: 'open' });
-// attachShadow用于设置当前组件的封装性
+// attachShadow用于设置当前组件的影子DOM
 // mode接收两个参数  open / closed
 ```
 
