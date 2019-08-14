@@ -44,11 +44,11 @@ DOM.appendChild(createEl);
 3. [template](./examples/demo05.html)
 
 ```
-    <template>
-      <h1>Hello World !</h1>
-    </template>
-    // template 标识用于定义自定义模板
-    // 抽离HTML模板，可复用，可拆分
+<template>
+  <h1>Hello World !</h1>
+</template>
+// template 标识用于定义自定义模板
+// 抽离HTML模板，可复用，可拆分
 ```
 
 #### template 特性
@@ -61,18 +61,18 @@ DOM.appendChild(createEl);
 ### [定义影子 DOM 模式](./examples/demo06.html)
 
 ```
-    let shadowRoot = this.attachShadow({ mode: 'open' });
-    // attachShadow用于设置当前组件的封装性
-    // mode接收两个参数  open / closed
+let shadowRoot = this.attachShadow({ mode: 'open' });
+// attachShadow用于设置当前组件的封装性
+// mode接收两个参数  open / closed
 ```
 
 ### [使用影子 DOM](./examples/demo07.html)
 
 ```
-    let shadowRoot = this.attachShadow({ mode: "open" });
-    let template = document.querySelector("template");
-    let cloneTemplate = document.importNode(template, true); // true 表示深拷贝节点
-    shadowRoot.appendChild(cloneTemplate);
+let shadowRoot = this.attachShadow({ mode: "open" });
+let template = document.querySelector("template");
+let cloneTemplate = document.importNode(template, true); // true 表示深拷贝节点
+shadowRoot.appendChild(cloneTemplate);
 ```
 
 ### 封装性
@@ -104,6 +104,8 @@ DOM.appendChild(createEl);
 2. :host
 3. :host()
 4. :host-context()
+
+CSS4 有很多好用惊喜的特性，后面会更新到，待续...
 ```
 ### 生命周期
 ```
