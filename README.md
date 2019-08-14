@@ -51,12 +51,12 @@ DOM.appendChild(createEl);
 ```
 
 #### template 特性
-
+```
 1. 内容在激活之前一直处于惰性状态, 这些标记就是隐藏的 DOM，它们不会被渲染
 2. 处于模板中的内容不会有副作用。脚本不会运行，图片不会加载，音频不会播放，...直到模板被使用
 3. 内容不在文档中。在主页面使用 document.getElementById() 或 querySelector() 不会返回模板的子节点
 4. 模板能够被放置在任何位置，包括 <head>，<body>，或 frameset，并且任何能够出现在以上元素中的内容都可以放到模板中。 注意，"任何位置"意味着 <template> 能够安全的出现在 HTML 解析器不允许出现的位置...几乎可以作为任何内容模型的子节点
-
+```
 ### [定义影子 DOM 模式](./examples/demo06.html)
 
 ```
@@ -77,15 +77,15 @@ DOM.appendChild(createEl);
 ### 封装性
 
 [DOM 的封装性](./examples/demo08.html)
-
+```
 组件内部的 DOM 节点无法被获取，无法在组件外部操作内部组件
-
+```
 [样式 的封装性](./examples/demo09.html)
-
+```
 组件内部的 DOM 不受外部样式污染
-
+```
 ### [插槽](./examples/demo10.html)
-
+```
 插槽，学过 Vue 的朋友相信对它会非常熟悉，webComponents 同样支持插槽
 
 插槽的好处很多，例如：
@@ -96,16 +96,16 @@ DOM.appendChild(createEl);
 4. 提高用户体验
 5. 离线渲染
    ...
-
+```
 ### 样式的封装性
-
+```
 1. :defined
 2. :host
 3. :host()
 4. :host-context()
-
+```
 ### 生命周期
-
+```
 0. constructor
 
 类的初始化
@@ -125,7 +125,7 @@ DOM.appendChild(createEl);
 4. attributeChangedCallback
 
    当 custom element 增加、删除、修改自身属性时，被调用
-
+```
 ### 实例
 
 1. 创建一个组件
